@@ -21,7 +21,7 @@ class Vrep_Communication:
         self.object_handle = []
 
         # Read files in object mesh directory
-        self.obj_mesh_texture_dir = "/homes/gt4118/Desktop/Robot_Learning/textures/"
+        self.obj_mesh_texture_dir = "/homes/gt4118/Desktop/Reinforcement_Learning/textures/"
 
         self.texture_list = os.listdir(self.obj_mesh_texture_dir)
 

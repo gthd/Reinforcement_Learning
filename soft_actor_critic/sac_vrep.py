@@ -145,7 +145,7 @@ class Main:
                 self.start_vrep(True)
 
             if j%100==0:
-                torch.save(self.policy_net.state_dict(), '/homes/gt4118/Desktop/Robot_Learning/sac.pt')
+                torch.save(self.policy_net.state_dict(), '/homes/gt4118/Desktop/Reinforcement_Learning/sac.pt')
 
             # self.robot.delete_texture()
             # self.robot.domain_randomize()
@@ -171,7 +171,7 @@ class Main:
         plt.suptitle('mean reward of last 50 episodes')
         plt.show()
         plt.pause(3)
-        plt.savefig('/homes/gt4118/Desktop/Robot_Learning/reward_plot.jpg')
+        plt.savefig('/homes/gt4118/Desktop/Reinforcement_Learning/reward_plot.jpg')
         plt.cla()
         plt.close()
 
@@ -188,7 +188,7 @@ class Main:
         plt.suptitle('success rate of last 50 episodes')
         plt.show()
         plt.pause(3)
-        plt.savefig('/homes/gt4118/Desktop/Robot_Learning/success_plot.jpg')
+        plt.savefig('/homes/gt4118/Desktop/Reinforcement_Learning/success_plot.jpg')
         plt.cla()
         plt.close()
 

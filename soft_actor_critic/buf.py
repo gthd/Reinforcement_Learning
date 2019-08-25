@@ -53,7 +53,7 @@ class ReplayMemory(object):
         if self.buffer_num - 1500 > 0:
             self.low = self.buffer_num - 1500
             try:
-                os.remove('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(self.buffer_num - 1500)+'.pkl.gz')
+                os.remove('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(self.buffer_num - 1500)+'.pkl.gz')
             except:
                 pass
 
@@ -66,13 +66,13 @@ class ReplayMemory(object):
         objects = []
         j = 0
         if buf != self.buffer_available-1:
-            gzip_file = gzip.open('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(buf+1)+'.pkl.gz', 'rb')
-            data_file = open('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(buf+1)+'.pkl', 'wb')
+            gzip_file = gzip.open('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(buf+1)+'.pkl.gz', 'rb')
+            data_file = open('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(buf+1)+'.pkl', 'wb')
             shutil.copyfileobj(gzip_file, data_file)
             data_file.close()
             gzip_file.close()
 
-        with (open('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(buf+1)+'.pkl', 'rb')) as openfile:
+        with (open('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(buf+1)+'.pkl', 'rb')) as openfile:
             while j < self.capacity:
                 try:
                     f = pickle.load(openfile)
@@ -86,7 +86,7 @@ class ReplayMemory(object):
                     break
                 j +=  1
         if buf != self.buffer_available-1:
-            os.remove('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(buf+1)+'.pkl')
+            os.remove('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(buf+1)+'.pkl')
         image = []
         numerical_state = []
         action = []
@@ -124,14 +124,14 @@ class ReplayMemory(object):
 
     def store_at_disk(self):
         if self.new:
-            data_file = open('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(self.buffer_num-1)+'.pkl', 'rb')
+            data_file = open('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(self.buffer_num-1)+'.pkl', 'rb')
             data = data_file.read()
-            data_gzip_file = gzip.open('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(self.buffer_num-1)+'.pkl.gz', 'wb')
+            data_gzip_file = gzip.open('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(self.buffer_num-1)+'.pkl.gz', 'wb')
             data_gzip_file.write(data)
             data_gzip_file.close()
             data_file.close()
-            os.remove('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(self.buffer_num-1)+'.pkl')
+            os.remove('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(self.buffer_num-1)+'.pkl')
         else:
-            data_file = open('/homes/gt4118/Desktop/Robot_Learning/Datasets/new_data2/my_dataset'+str(self.buffer_num)+'.pkl', 'ab')
+            data_file = open('/homes/gt4118/Desktop/Reinforcement_Learning/Datasets/my_dataset'+str(self.buffer_num)+'.pkl', 'ab')
             pickle.dump(self.memory[0], data_file, -1)
             data_file.close()
