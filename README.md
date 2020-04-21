@@ -53,6 +53,10 @@ This repository contains all the necessary code for training a robot to perform 
     pip install -r requirements.txt
     ```
 
+3.  There is the option of whether to show the V-REP simulation environment while
+    the robot gathers data. To enable visualization delete the -h parameter from
+    https://github.com/gthd/Reinforcement_Learning/blob/0f2c712ce6ea0af5f65e1df9aaf6d5212c2d0b6b/soft_actor_critic/utils.py#L82
+
 ## Demo
 
 A demo app is included to show how to use the project.

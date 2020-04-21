@@ -6,9 +6,9 @@ import torch.optim as optim
 from torch.distributions import Normal
 import numpy as np
 import matplotlib.pyplot as plt
-import soft_actor_critic.utils as utils
-import soft_actor_critic.buffer as buffer
-import soft_actor_critic.vrep as vrep
+import utils
+import buffer
+import vrep
 plt.ion()
 
 class Main:

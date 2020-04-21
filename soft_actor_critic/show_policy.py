@@ -203,5 +203,5 @@ class Visualiser:
             print(episode_reward)
             self.robot.reset_object_position_and_orientation()
 
-LEARNEDPOLICY = Visualiser()
-LEARNEDPOLICY.visualise()
+# LEARNEDPOLICY = Visualiser()
+# LEARNEDPOLICY.visualise()

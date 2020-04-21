@@ -5,7 +5,7 @@ import time
 import array
 from PIL import Image  as I
 import numpy as np
-import soft_actor_critic.vrep as vrep
+import vrep
 np.random.seed(24)
 
 class VrepCommunication:
@@ -79,7 +79,7 @@ class VrepCommunication:
         os.killpg(pgrp, signal.SIGKILL)
 
     def establish_communication(self):
-        remote_api_string = '-h -gREMOTEAPISERVERSERVICE_' + str(self.port_num) + '_FALSE_TRUE'
+        remote_api_string = '-gREMOTEAPISERVERSERVICE_' + str(self.port_num) + '_FALSE_TRUE'
         args = [self.vrep_path, remote_api_string]
         self.process = Popen(args, preexec_fn=os.setsid)
         time.sleep(6)
