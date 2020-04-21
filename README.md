@@ -15,17 +15,17 @@ This repository contains all the necessary code for training a robot to perform 
    created using the Education Version. **Add the version that it was developed under**
 
 3.
-```
+  ```
    sudo apt-get install libxkbcommon-x11-dev
 
    export PATH=$PATH:~/Qt/Tools/QtCreator/bin
-```
+   ```
 
 ### Installation
 
 1.  If you don't already have it, [install Python](https://www.python.org/downloads/).
 
-    This repository was developed is compatible with Python 2.7, 3.3, 3.4, 3.5 and 3.6.
+    This repository was developed is compatible with Python 2.7.
 
 2.  General recommendation for Python development is to use a Virtual Environment.
     For more information, see https://docs.python.org/3/tutorial/venv.html

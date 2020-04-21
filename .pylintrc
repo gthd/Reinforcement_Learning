@@ -1,0 +1,8 @@
+[MESSAGES CONTROL]
+# disabled messages
+disable=missing-docstring, too-many-instance-attributes, too-many-arguments, too-many-locals, too-many-public-methods, import-error
+
+[TYPECHECK]
+ignored-modules = numpy, numpy.testing
+ignored-classes = numpy, numpy.testing
+generated-members = torch.*, numpy.*
