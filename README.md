@@ -14,9 +14,12 @@ This repository contains all the necessary code for training a robot to perform 
 
    created using the Education Version. **Add the version that it was developed under**
 
-3. sudo apt-get install libxkbcommon-x11-dev
+3.
+```
+   sudo apt-get install libxkbcommon-x11-dev
 
    export PATH=$PATH:~/Qt/Tools/QtCreator/bin
+```
 
 ### Installation
 
